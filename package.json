@@ -17,6 +17,7 @@
     "react": "^18",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^18",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "swr": "^2.2.4"
   }
 }
