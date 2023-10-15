@@ -3,8 +3,12 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from "@/styles/Home.module.css"
 import {useFormik } from "formik";
 import * as Yup from "yup";
-import { loginValidation, passwordValidation } from "@/lib/signupLib";
+import { loginValidation, passwordValidation } from "@/lib/signinLib";
 import { useState } from "react";
+import { BsLock } from "react-icons/bs";
+import { MdLockOutline} from "react-icons/md";
+
+
 
 
 export default function loginPage ( params ) {
@@ -46,16 +50,21 @@ export default function loginPage ( params ) {
             </Head>
             <main className={styles.main}>
                 <Container>
-                    <h1 className="text-center"> Hiditra </h1>
+                    <h1 className="text-center mb-3"> 
+                        <span className={`icon-border-rounded-dark `}>
+                            <MdLockOutline />    
+                        </span>
+                        
+                    </h1>
                     <Row>
-                        <Col lg = {3} md = {2} sm = {1}></Col>
-                        <Col lg = {6} md = {8} sm = {10}>
+                        <Col lg = {4} md = {3} sm = {1}></Col>
+                        <Col lg = {4} md = {6} sm = {10}>
                                 <form 
                                     onSubmit={formik.handleSubmit}
                                 >
                                     <fieldset>
                                         <div>
-                                            <label className = "form-label"
+                                            <label className = "form-label mb-2"
                                                 htmlFor="login"
                                             >
                                                 Login
@@ -64,7 +73,7 @@ export default function loginPage ( params ) {
                                                 type="text"
                                                 name = "login"
                                                 id="login"
-                                                className={`form-control ${ loginIsValid && "is-invalid" }`}
+                                                className={`form-control ${ loginIsValid && "is-invalid" } mt-2 mb-3`}
                                                 {...formik.getFieldProps("login")}
                                             />
                                             {
@@ -73,16 +82,16 @@ export default function loginPage ( params ) {
                                             }
                                         </div>
                                         <div>
-                                            <label className="form-label" 
+                                            <label className="form-label mb-2" 
                                                 htmlFor="password"
                                             >
-                                                Password
+                                                Mot de passe
                                             </label>
                                             <input
                                                 type="password"
                                                 name = "password"
                                                 id="password"
-                                                className = {`form-control ${ passwordIsValid && "is-invalid" }`}
+                                                className = {`form-control ${ passwordIsValid && "is-invalid" } mt-2 mb-3`}
                                                 {...formik.getFieldProps("password")}
                                             />
                                             {
@@ -91,12 +100,17 @@ export default function loginPage ( params ) {
                                             }
                                         </div>
                                     </fieldset>
-                                    <div>
-                                        <Button type="submit" className="btn"> Signup </Button>
+                                    <div className="mb-2">
+                                        <Button type="submit" className="btn mt-3 w-100"> Se connecter </Button>
+                                    </div>
+                                    <div className="mt-3">
+                                        <p className="form-text">
+                                            <a href="./signup"> Nouveau? Créez un compte</a>
+                                        </p>
                                     </div>
                                 </form>
                         </Col>
-                        <Col lg = {3} md = {2} sm = {1}></Col>
+                        <Col lg = {4} md = {3} sm = {1} ></Col>
                     </Row>
                 </Container>
             </main>
