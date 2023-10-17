@@ -2,10 +2,8 @@ import Head from "next/head";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from "@/styles/Home.module.css"
 import {useFormik } from "formik";
-import * as Yup from "yup";
 import { loginValidation, passwordValidation } from "@/lib/signinLib";
 import { useState } from "react";
-import { BsLock } from "react-icons/bs";
 import { MdLockOutline} from "react-icons/md";
 
 
@@ -57,8 +55,8 @@ export default function loginPage ( params ) {
                         
                     </h1>
                     <Row>
-                        <Col lg = {4} md = {3} sm = {1}></Col>
-                        <Col lg = {4} md = {6} sm = {10}>
+                        <Col lg = {4} md = {3} sm = {1} ></Col>
+                        <Col lg = {4} md = {6} sm = {10} >
                                 <form 
                                     onSubmit={formik.handleSubmit}
                                 >
