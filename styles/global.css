@@ -1,0 +1,21 @@
+.icon-border-rounded-dark {
+    border: 1px solid #000; /* Couleur et épaisseur de la bordure */
+    border-radius: 50%; /* Bordure ronde */
+    display: inline-flex; /* Permet au conteneur de s'ajuster à la taille de l'icône */
+    align-items: center; /* Centre l'icône verticalement */
+    justify-content: center; /* Centre l'icône horizontalement */
+    padding: 8px; /* Espace entre l'icône et la bordure */
+}
+.icon-border-rounded-light {
+    border: 1px solid #ffffff; /* Couleur et épaisseur de la bordure */
+    border-radius: 50%; /* Bordure ronde */
+    display: inline-flex; /* Permet au conteneur de s'ajuster à la taille de l'icône */
+    align-items: center; /* Centre l'icône verticalement */
+    justify-content: center; /* Centre l'icône horizontalement */
+    padding: 8px; /* Espace entre l'icône et la bordure */
+}
+
+.icon_light {
+    color: aliceblue;
+}
+  
